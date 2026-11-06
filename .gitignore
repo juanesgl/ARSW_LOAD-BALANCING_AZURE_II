@@ -1,0 +1,21 @@
+# Dependencias de Node
+node_modules/
+npm-debug.log*
+
+# Configuración local de Azure Functions (puede contener secretos)
+local.settings.json
+.env
+
+# Artefactos de compilación / herramientas
+bin/
+obj/
+.azurefunctions/
+*.log
+
+# Sistema operativo / editores
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IMPORTANTE: NO se ignoran first_newman/, *.csv ni images/
+# porque son la evidencia del laboratorio.
