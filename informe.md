@@ -379,7 +379,7 @@ ARSW_LOAD-BALANCING_AZURE_II/
 │   └── package.json              Dependencia big-integer
 ├── images/
 │   ├── part2/, part3/            Imágenes del enunciado
-│   └── solLab/                   Capturas de la solución (1.png … 8.png)
+│   └── solLab/                   Capturas de la solución (1.png … 9.png)
 └── .vscode/                      Configuración de despliegue con la extensión Azure Functions
 ```
 
@@ -389,7 +389,7 @@ ARSW_LOAD-BALANCING_AZURE_II/
 | 2. Instalar la extensión Azure Functions | [Sección 3.1](#31-despliegue), `.vscode/` |
 | 3. Desplegar la función Fibonacci | [Sección 3.1](#31-despliegue), captura 4 |
 | 4. Probar la función en el portal | [Sección 3.3](#33-prueba-desde-el-portal), capturas 5–6 |
-| 5. Newman con 10 peticiones concurrentes e informe | [Sección 4](#4-prueba-de-carga-con-newman-10-peticiones-concurrentes), captura 7, `first_newman/`, `scripts/newman_concurrente.ps1` |
+| 5. Newman con 10 peticiones concurrentes e informe | [Sección 4](#4-prueba-de-carga-con-newman-10-peticiones-concurrentes), capturas 7 y 9 (métricas), `first_newman/`, `scripts/newman_concurrente.ps1` |
 | 6. Fibonacci recursivo con memoization y prueba tras 5 min | [Sección 5](#5-fibonacci-recursivo-con-memoization-fibmemo), captura 8, CSV, `scripts/prueba_fibmemo.ps1` |
 | Preguntas | [Sección 6](#6-respuestas-a-las-preguntas) |
 | Informe | Este documento |
