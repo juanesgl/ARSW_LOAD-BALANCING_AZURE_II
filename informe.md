@@ -188,6 +188,12 @@ El tamaño de la respuesta (208 988 bytes) coincide con el número de dígitos d
 - **Nota sobre la concurrencia real:** `Start-Job` lanza un proceso de PowerShell por job, así que las 10 peticiones no salieron exactamente en el mismo instante (las marcas de inicio de los reportes se reparten en ~21 s). Aun así, en el pico hubo hasta 7 peticiones en vuelo a la vez.
 - **Sobre el 70 % de CPU:** en el plan Consumption no se administra ni se dimensiona la CPU de la instancia; esa restricción la gestiona la plataforma mediante el escalado. Lo que sí se observa es el costo en latencia: el sistema es *elástico* pero no responde en tiempos bajos frente a cargas CPU-intensivas repentinas.
 
+**Métricas en Azure Monitor.** En el blade *Métricas* de la Function App (espacio de nombres *App Service métricas estándar*) el plan Consumption (Y1) **no expone ninguna métrica de porcentaje de CPU** (el filtro "CPU" no devuelve resultados), y *Automatic Scaling Instance Count* no registra datos en este plan. Por eso se usó *Function Execution Count* (Sum) en la ventana del 2 de noviembre, que muestra la actividad de las pruebas entre las 6 PM y las 7 PM (hora local, UTC-05:00), con un total de 31 ejecuciones en el periodo:
+
+![Métrica Function Execution Count de la Function App durante las pruebas del 2 de noviembre](images/solLab/9.png)
+
+Esta captura demuestra cuándo y cuánta carga recibió la función, pero no permite verificar directamente el umbral del 70 % de CPU: en Consumption esa medición no está disponible para el usuario y el control lo hace la propia plataforma al escalar.
+
 ---
 
 ## 5. Fibonacci recursivo con memoization (FibMemo)
